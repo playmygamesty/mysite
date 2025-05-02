@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YourName – Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      color: #58a6ff;
+    }
+
+    .typed-text {
+      font-size: 1.3em;
+      color: #8b949e;
+      height: 30px;
+      overflow: hidden;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1em;
+      color: white;
+      background: #238636;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    a.button:hover {
+      background: #2ea043;
+    }
+
+    .links {
+      margin-top: 20px;
+    }
+
+    .links a {
+      color: #58a6ff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi, I'm YourName 👾</h1>
+  <div class="typed-text" id="typed-text"></div>
+
+  <a class="button" href="https://yourgameslink.com" target="_blank">🎮 Play My Games</a>
+
+  <div class="links">
+    <a href="https://twitter.com/yourhandle" target="_blank">Twitter/X</a>
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+  </div>
+
+  <script>
+    const texts = [
+      "Game Developer 🕹️",
+      "Scripter 🧠",
+      "Tech Enthusiast 💡",
+      "Building cool things in Roblox 🔧"
+    ];
+    let count = 0;
+    let index = 0;
+    let currentText = '';
+    let letter = '';
+
+    (function type() {
+      if (count === texts.length) {
+        count = 0;
+      }
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+
+      document.getElementById('typed-text').textContent = letter;
+      if (letter.length === currentText.length) {
+        setTimeout(() => {
+          index = 0;
+          count++;
+          setTimeout(type, 300);
+        }, 1200);
+      } else {
+        setTimeout(type, 80);
+      }
+    })();
+  </script>
+</body>
+</html>
 
