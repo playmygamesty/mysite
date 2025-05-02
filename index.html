@@ -33,9 +33,15 @@
       overflow: hidden;
     }
 
+    .button-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
     a.button {
       display: inline-block;
-      margin-top: 30px;
       padding: 15px 30px;
       font-size: 1em;
       color: white;
@@ -50,7 +56,7 @@
     }
 
     .links {
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .links a {
@@ -64,7 +70,10 @@
   <h1>Hi, I'm YourName 👾</h1>
   <div class="typed-text" id="typed-text"></div>
 
-  <a class="button" href="https://yourgameslink.com" target="_blank">🎮 Play My Games</a>
+  <div class="button-container">
+    <a class="button" href="https://www.roblox.com/games/1234567890/Game-One" target="_blank">🎮 Play Game One</a>
+    <a class="button" href="https://www.roblox.com/games/9876543210/Game-Two" target="_blank">🎮 Play Game Two</a>
+  </div>
 
   <div class="links">
     <a href="https://twitter.com/yourhandle" target="_blank">Twitter/X</a>
@@ -104,4 +113,3 @@
   </script>
 </body>
 </html>
-
